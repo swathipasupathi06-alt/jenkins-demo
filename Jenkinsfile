@@ -4,12 +4,12 @@ pipeline {
         stage('Start') {
             steps { echo "Starting pipeline..." }
         }
-        stage('Clone repository') {
-            steps {
-                git url: 'https://github.com/<your-username>/jenkins-demo.git', branch: 'main'
-                echo "Repository cloned."
-            }
-        }
+       stage('Clone repository') {
+    steps {
+        git url: 'https://github.com/swathipasupathi06-alt/jenkins-demo.git', branch: 'main'
+        echo "Repository cloned."
+    }
+}
         stage('Verify index.html') {
             steps {
                 script {
